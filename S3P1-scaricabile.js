@@ -105,7 +105,12 @@ console.log(giveMeRandom(10));
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
+function area (l1,l2){
+    let moltiplicazione = l1 * l2;
+    return moltiplicazione
+};
 
+console.log(area(3,4))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
@@ -114,13 +119,43 @@ console.log(giveMeRandom(10));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff (a){
+let differenza = Math.abs(a -19);
 
+if (differenza > 19) {
+differenza = differenza * 3;
+return differenza;
+
+} else {
+    return differenza;
+}
+
+
+
+}
+console.log(crazyDiff(50))
+console.log(crazyDiff(5))
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function codify (string){
+let prefix = 'code';
+if (string.startsWith('code')){ 
+    return string
+}  else {
+    return prefix + string
+}
+
+};
+
+console.log(codify('armandoMaradona'))
+console.log(codify('pippoBaudo'))
+console.log(codify('daftPunk'))
+console.log(codify('erPupone'))
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -130,8 +165,30 @@ console.log(giveMeRandom(10));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function check3and7 (n){
+if (n % 3 === 0 || n % 7 === 0) {
+    return true
+} else {
+    return false
+}
+
+}
+console.log(check3and7(7));
+console.log(check3and7(3));
+console.log(check3and7(40))
+
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+function cutString (string){
+return string.slice(1, string.length -1 )  
+
+}
+console.log(cutString('Bello'))
+console.log(cutString('Cardinale'))
+console.log(cutString('Sbudellato'))
+console.log(cutString('Motosega'))
